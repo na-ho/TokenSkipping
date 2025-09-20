@@ -38,31 +38,31 @@ fi
 
 # ---- Full KV ----
 echo "[BASH] ppl | method=Full KV (full)"
-${PY} TokenSkipping_03_06_llama3.py ppl --model "${MODEL}" --policy full --block ${BLOCK} --attn-impl ${ATTN_IMPL} ${SRC_FLAG} --csv "${CSV}"
+${PY} TokenSkipping.py ppl --model "${MODEL}" --policy full --block ${BLOCK} --attn-impl ${ATTN_IMPL} ${SRC_FLAG} --csv "${CSV}"
 
 echo
 
 # ---- Sliding Window (last-N) ----
 echo "[BASH] ppl | method=Sliding Window (last-N) (window) | window=${WINDOW}"
-${PY} TokenSkipping_03_06_llama3.py ppl --model "${MODEL}" --policy window --window ${WINDOW} --block ${BLOCK} --attn-impl ${ATTN_IMPL} ${SRC_FLAG} --csv "${CSV}"
+${PY} TokenSkipping.py ppl --model "${MODEL}" --policy window --window ${WINDOW} --block ${BLOCK} --attn-impl ${ATTN_IMPL} ${SRC_FLAG} --csv "${CSV}"
 
 echo
 
 # ---- Key-norm pruning ----
 echo "[BASH] ppl | method=Key-norm pruning (prune) | anchors=${ANCHORS} start=${START_KEEP} end=${END_KEEP}"
-${PY} TokenSkipping_03_06_llama3.py ppl --model "${MODEL}" --policy prune --anchors ${ANCHORS} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --block ${BLOCK} --attn-impl ${ATTN_IMPL} ${SRC_FLAG} --csv "${CSV}"
+${PY} TokenSkipping.py ppl --model "${MODEL}" --policy prune --anchors ${ANCHORS} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --block ${BLOCK} --attn-impl ${ATTN_IMPL} ${SRC_FLAG} --csv "${CSV}"
 
 echo
 
 # ---- TokenSkipping (quota) ----
 echo "[BASH] ppl | method=TokenSkipping (quota) (tskip) | anchors=${ANCHORS} reservoir=${RESERVOIR} start=${START_KEEP} end=${END_KEEP}"
-${PY} TokenSkipping_03_06_llama3.py ppl --model "${MODEL}" --policy tskip --anchors ${ANCHORS} --reservoir ${RESERVOIR} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --block ${BLOCK} --attn-impl ${ATTN_IMPL} ${SRC_FLAG} --csv "${CSV}"
+${PY} TokenSkipping.py ppl --model "${MODEL}" --policy tskip --anchors ${ANCHORS} --reservoir ${RESERVOIR} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --block ${BLOCK} --attn-impl ${ATTN_IMPL} ${SRC_FLAG} --csv "${CSV}"
 
 echo
 
 # ---- Attention-score pruning ----
 echo "[BASH] ppl | method=Attention-score pruning (attn) | anchors=${ANCHORS} start=${START_KEEP} end=${END_KEEP} (attn_impl=${ATTN_IMPL})"
-${PY} TokenSkipping_03_06_llama3.py ppl --model "${MODEL}" --policy attn --anchors ${ANCHORS} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --block ${BLOCK} --attn-impl ${ATTN_IMPL} ${SRC_FLAG} --csv "${CSV}"
+${PY} TokenSkipping.py ppl --model "${MODEL}" --policy attn --anchors ${ANCHORS} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --block ${BLOCK} --attn-impl ${ATTN_IMPL} ${SRC_FLAG} --csv "${CSV}"
 
 echo
 echo "===== PPL suite complete. CSV -> ${CSV} ====="

@@ -31,31 +31,31 @@ echo
 
 # ---- Full KV ----
 echo "[BASH] bench | method=Full KV (full) | attn_impl=${ATTN_IMPL}"
-${PY} TokenSkipping_03_06_llama3.py bench --model "${MODEL}" --policy full --ctx ${CTX} --new ${NEW} --attn-impl ${ATTN_IMPL} --mem-measure ${MEM_MEASURE} --csv "${CSV}"
+${PY} TokenSkipping.py bench --model "${MODEL}" --policy full --ctx ${CTX} --new ${NEW} --attn-impl ${ATTN_IMPL} --mem-measure ${MEM_MEASURE} --csv "${CSV}"
 
 echo
 
 # ---- Sliding Window (last-N) ----
 echo "[BASH] bench | method=Sliding Window (last-N) (window) | window=${WINDOW} | attn_impl=${ATTN_IMPL}"
-${PY} TokenSkipping_03_06_llama3.py bench --model "${MODEL}" --policy window --window ${WINDOW} --ctx ${CTX} --new ${NEW} --attn-impl ${ATTN_IMPL} --mem-measure ${MEM_MEASURE} --csv "${CSV}"
+${PY} TokenSkipping.py bench --model "${MODEL}" --policy window --window ${WINDOW} --ctx ${CTX} --new ${NEW} --attn-impl ${ATTN_IMPL} --mem-measure ${MEM_MEASURE} --csv "${CSV}"
 
 echo
 
 # ---- Key-norm pruning ----
 echo "[BASH] bench | method=Key-norm pruning (prune) | anchors=${ANCHORS} start=${START_KEEP} end=${END_KEEP} | attn_impl=${ATTN_IMPL}"
-${PY} TokenSkipping_03_06_llama3.py bench --model "${MODEL}" --policy prune --anchors ${ANCHORS} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --ctx ${CTX} --new ${NEW} --attn-impl ${ATTN_IMPL} --mem-measure ${MEM_MEASURE} --csv "${CSV}"
+${PY} TokenSkipping.py bench --model "${MODEL}" --policy prune --anchors ${ANCHORS} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --ctx ${CTX} --new ${NEW} --attn-impl ${ATTN_IMPL} --mem-measure ${MEM_MEASURE} --csv "${CSV}"
 
 echo
 
 # ---- TokenSkipping (quota) ----
 echo "[BASH] bench | method=TokenSkipping (quota) (tskip) | anchors=${ANCHORS} reservoir=${RESERVOIR} start=${START_KEEP} end=${END_KEEP} | attn_impl=${ATTN_IMPL}"
-${PY} TokenSkipping_03_06_llama3.py bench --model "${MODEL}" --policy tskip --anchors ${ANCHORS} --reservoir ${RESERVOIR} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --ctx ${CTX} --new ${NEW} --attn-impl ${ATTN_IMPL} --mem-measure ${MEM_MEASURE} --csv "${CSV}"
+${PY} TokenSkipping.py bench --model "${MODEL}" --policy tskip --anchors ${ANCHORS} --reservoir ${RESERVOIR} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --ctx ${CTX} --new ${NEW} --attn-impl ${ATTN_IMPL} --mem-measure ${MEM_MEASURE} --csv "${CSV}"
 
 echo
 
 # ---- Attention-score pruning ----
 echo "[BASH] bench | method=Attention-score pruning (attn) | anchors=${ANCHORS} start=${START_KEEP} end=${END_KEEP} (attn_impl=eager)"
-${PY} TokenSkipping_03_06_llama3.py bench --model "${MODEL}" --policy attn --anchors ${ANCHORS} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --ctx ${CTX} --new ${NEW} --attn-impl "eager" --mem-measure ${MEM_MEASURE} --csv "${CSV}"
+${PY} TokenSkipping.py bench --model "${MODEL}" --policy attn --anchors ${ANCHORS} --start-keep ${START_KEEP} --end-keep ${END_KEEP} --ctx ${CTX} --new ${NEW} --attn-impl "eager" --mem-measure ${MEM_MEASURE} --csv "${CSV}"
 
 echo
 echo "===== BENCH suite complete. CSV -> ${CSV} ====="
