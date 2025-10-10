@@ -2,7 +2,8 @@
 
 # ==== Config (edit as you like) ====
 # export MODEL="Qwen/Qwen2-0.5B-Instruct"
-export MODEL="meta-llama/Meta-Llama-3-8B-Instruct"
+#export MODEL="meta-llama/Meta-Llama-3-8B-Instruct"
+export MODEL="meta-llama/Meta-Llama-3-70B-Instruct"
 # export CTX="2048"
 export CTX="32768"
 export NEW="512"
