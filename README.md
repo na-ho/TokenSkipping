@@ -74,8 +74,6 @@ Narupol Hongthai
 Ekapol Chuangsuwanich
 *(Chulalongkorn University)*
 
-*2025 The 13th International Conference on Information Technology: IoT and Smart City (ICIT 2025)*
-
 ## Updates
 For the latest version of this code and issue tracking, please visit:  
 https://github.com/na-ho/TokenSkipping
