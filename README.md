@@ -73,7 +73,6 @@ If you use this code or method, please cite our paper:
 Narupol Hongthai
 Ekapol Chuangsuwanich
 *(Chulalongkorn University)*
-
 *2025 The 13th International Conference on Information Technology: IoT and Smart City (ICIT 2025)*
 
 ## Updates
