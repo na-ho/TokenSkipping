@@ -68,7 +68,8 @@ python TokenSkipping_benchmark_suite.py chart \
 ## Citation
 If you use this code or method, please cite our paper:
 
-**TokenSkipping: A Practical and Robust KV Cache Pruning Method for Long-Context LLM Inference** Narupol Hongthai and Ekapol Chuangsuwanich  
+**TokenSkipping: A Practical and Robust KV Cache Pruning Method for Long-Context LLM Inference** 
+Narupol Hongthai and Ekapol Chuangsuwanich  
 *2025 The 13th International Conference on Information Technology: IoT and Smart City (ICIT 2025)*
 
 ## Updates
