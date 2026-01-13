@@ -63,3 +63,14 @@ python TokenSkipping_benchmark_suite.py chart \
 ## Policies
 
 `full`, `window`/`fifo`, `prune` (L2-norm), `attn`, `tskip` (TokenSkipping)
+
+
+## Citation
+If you use this code or method, please cite our paper:
+
+**TokenSkipping: A Practical and Robust KV Cache Pruning Method for Long-Context LLM Inference** Narupol Hongthai and Ekapol Chuangsuwanich  
+*2025 The 13th International Conference on Information Technology: IoT and Smart City (ICIT 2025)*
+
+## Updates
+For the latest version of this code and issue tracking, please visit:  
+https://github.com/na-ho/TokenSkipping
